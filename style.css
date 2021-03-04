@@ -1,0 +1,130 @@
+@import url("https://fonts.googleapis.com/css2?family=DotGothic16&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "DotGothic16", sans-serif;
+  letter-spacing: 4px;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #2f2436;
+}
+
+body::before {
+  content: "";
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  position: absolute;
+  clip-path: circle(23% at 42% 30%);
+  background: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    from(#48ff00),
+    to(#0044ff)
+  );
+  background: linear-gradient(#48ff00, #0044ff);
+}
+
+body::after {
+  content: "";
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  position: absolute;
+  clip-path: circle(25% at 60% 80%);
+  background: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    from(#ff0015),
+    to(#a200ff)
+  );
+  background: linear-gradient(#a200ff, #ff0015);
+}
+
+.container {
+  position: relative;
+  overflow: hidden;
+  z-index: 10;
+  border-radius: 10px;
+  backdrop-filter: blur(15px);
+  background: #36101f34;
+  box-shadow: 0 0 30px #572439;
+  border-top: 2px solid #532e3e;
+  border-left: 2px solid #532e3e;
+  border-right: 1px solid #532e3e;
+  border-bottom: 1px solid #532e3e;
+}
+
+.container .calculator {
+  position: relative;
+  display: grid;
+}
+
+.container .calculator .value {
+  height: 130px;
+  width: 320px;
+  padding: 10px;
+  grid-column: span 4;
+  outline: none;
+  text-align: right;
+  font-size: 47px;
+  background: transparent;
+  color: #fff;
+  border: none;
+  border-bottom: 2px solid#795464;
+  border-right: 1px solid #795464;
+}
+
+.container .calculator span {
+  width: 80px;
+  height: 80px;
+  display: grid;
+  user-select: none;
+  place-items: center;
+  cursor: pointer;
+  font-size: 32px;
+  font-weight: bold;
+  color: #fff;
+  border-bottom: 1px solid #795464;
+  border-right: 1px solid #795464;
+  transition: 0.3s;
+}
+
+.container .calculator span:hover {
+  transition: 0;
+  background: #47343b7e;
+}
+
+.container .calculator span:active {
+  font-size: 32px;
+  background: #c47b9a;
+  color: #ff0055;
+}
+
+.container .calculator .clear {
+  width: 160px;
+  grid-column: span 2;
+  background: #462b362d;
+}
+
+.container .calculator .plus {
+  height: 160px;
+  grid-row: span 2;
+  font-size: 32px;
+}
+
+.equal {
+  font-size: 32px;
+  background: #462b3631;
+}
